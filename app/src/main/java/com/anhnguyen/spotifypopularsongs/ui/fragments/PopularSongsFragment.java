@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -39,11 +40,10 @@ public class PopularSongsFragment extends BaseFragment implements ListPopularSon
     @Inject
     PopularSongsPresenter popularSongsPresenter;
 
-    private PopularSongViewListener feedsViewListener;
+    private PopularSongViewListener popularSongViewListener;
 
     @Bind(R.id.lv)
     ListView listView;
-
 
     @Bind(R.id.progress_wheel)
     ProgressWheel progressWheel;
@@ -74,7 +74,7 @@ public class PopularSongsFragment extends BaseFragment implements ListPopularSon
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         if(activity instanceof PopularSongViewListener){
-            this.feedsViewListener = (PopularSongViewListener)activity;
+            this.popularSongViewListener = (PopularSongViewListener)activity;
         }
     }
 
@@ -124,6 +124,8 @@ public class PopularSongsFragment extends BaseFragment implements ListPopularSon
     }
 
     private void setupUI() {
+        popularSongsAdapter = new PopularSongsAdapter(getActivity(), new ArrayList<SongModel>());
+        listView.setAdapter(popularSongsAdapter);
 
         swrl.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -171,8 +173,8 @@ public class PopularSongsFragment extends BaseFragment implements ListPopularSon
     }
 
     @Override
-    public void renderListPopularSongs(List<SongModel> storyModels) {
-
+    public void renderListPopularSongs(List<SongModel> songs) {
+        popularSongsAdapter.setListSongs(songs);
     }
 
     @Override
@@ -182,8 +184,8 @@ public class PopularSongsFragment extends BaseFragment implements ListPopularSon
 
     @Override
     public void viewSong(SongModel songModel) {
-        if (this.feedsViewListener != null) {
-            this.feedsViewListener.onUserClicked(songModel);
+        if (this.popularSongViewListener != null) {
+            this.popularSongViewListener.onUserClicked(songModel);
         }
     }
 

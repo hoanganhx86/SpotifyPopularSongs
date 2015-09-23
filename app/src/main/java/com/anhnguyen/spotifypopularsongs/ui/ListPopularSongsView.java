@@ -6,10 +6,10 @@ import java.util.List;
 
 public interface ListPopularSongsView extends LoadDataView {
 
-    void renderListPopularSongs(List<SongModel> songModels);
+    void renderListPopularSongs(List<SongModel> songs);
 
     void onFailedLoadData(String error);
 
-    void viewSong(SongModel songModel);
+    void viewSong(SongModel song);
 
 }

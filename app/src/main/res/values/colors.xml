@@ -1,8 +1,8 @@
 <resources>
 
     <!-- color primary -->
-    <color name="colorPrimary">#000000</color>
-    <color name="window_background">#000000</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="window_background">#FFFFFF</color>
 
     <!-- Web colors -->
     <color name="white">#FFFFFF</color>
