@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- color primary -->
+    <color name="colorPrimary">#000000</color>
+    <color name="window_background">#000000</color>
+
+    <!-- Web colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#BF4E16</color>
+    <color name="red_thick">#E0121B</color>
+    <color name="blue">#0000FF</color>
+    <color name="blue_light">#167DF8</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="gray">#808080</color>
+    <color name="orange">#FFA500</color>
+    <color name="brown">#A52A2A</color>
+    <color name="maroon">#800000</color>
+    <color name="green">#008000</color>
+    <color name="green_banana_leaf">#8CC253</color>
+    <color name="olive">#808000</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="dark_blue">#0000A0</color>
+    <color name="light_blue">#ADD8E6</color>
+    <color name="purple">#ADD8E6</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="lime">#00FF00</color>
+    <color name="fuchsia">#FF00FF</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_overlay">#FAFAFA</color>
+
+    <color name="color_icon_highlighted">#FF55DBD7</color>
+
+</resources>

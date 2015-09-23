@@ -7,9 +7,9 @@ import android.content.Context;
 /**
  * Factory used to create error messages from an Exception as a condition.
  */
-public class UBLErrorMessageFactory {
+public class ErrorMessageFactory {
 
-    private UBLErrorMessageFactory() {
+    private ErrorMessageFactory() {
         //empty
     }
 

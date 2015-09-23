@@ -43,7 +43,7 @@ public class SongModelDataMapper {
      * @param songsCollection Objects to be transformed.
      * @return List of {@link SongModel}.
      */
-    public static List<SongModel> transformUsers(Collection<Song> songsCollection) {
+    public static List<SongModel> transformSongs(Collection<Song> songsCollection) {
         ArrayList<SongModel> songModels;
 
         if (songsCollection != null && ! songsCollection.isEmpty()) {

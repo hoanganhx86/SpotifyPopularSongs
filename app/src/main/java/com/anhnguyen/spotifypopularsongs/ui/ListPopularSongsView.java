@@ -10,6 +10,6 @@ public interface ListPopularSongsView extends LoadDataView {
 
     void onFailedLoadData(String error);
 
-    void viewChannel(SongModel songModel);
+    void viewSong(SongModel songModel);
 
 }
