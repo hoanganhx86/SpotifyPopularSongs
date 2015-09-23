@@ -1,0 +1,20 @@
+apply from: 'buildsystem/ci.gradle'
+apply from: 'buildsystem/dependencies.gradle'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.3.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+    }
+}
+
+allprojects {
+    ext {
+        androidApplicationId = 'com.anhnguyen.spotifypopularsongs'
+        androidVersionCode = 1
+        androidVersionName = "1.0"
+    }
+}
