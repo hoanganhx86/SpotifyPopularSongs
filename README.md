@@ -9,7 +9,7 @@ Get and display Spotify polular songs
 - Commit begin: 7a23308734a39deecaf8b281e0365a180a342fda
 - Commit end: 4e3aa28c7b8ea42c89adade6878793dc4d16727e
 
-# Libraries used:
+# Libraries used
 - Retrofit : Restful web service http://square.github.io/retrofit/
 - RxAndroid: Better solution replace for Asynctask and Asynctaskloader : http://blog.stablekernel.com/replace-asynctask-asynctaskloader-rx-observable-rxjava-android-patterns/
 - RealmDB: database https://realm.io/
