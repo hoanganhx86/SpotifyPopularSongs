@@ -7,7 +7,8 @@
     <ImageView
         android:id="@+id/imv"
         android:layout_width="@dimen/song_item_thumb_size"
-        android:layout_height="@dimen/song_item_thumb_size"/>
+        android:layout_height="@dimen/song_item_thumb_size"
+        android:layout_margin="@dimen/margin_small"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -19,10 +20,12 @@
             style="@style/AppTheme.TextViewTitle"
             android:id="@+id/tv1"
             android:layout_width="wrap_content"
+            android:layout_marginBottom="0dp"
             android:layout_height="wrap_content"/>
         <TextView
             style="@style/AppTheme.TextViewSubTitle"
             android:id="@+id/tv2"
+            android:layout_marginTop="0dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
