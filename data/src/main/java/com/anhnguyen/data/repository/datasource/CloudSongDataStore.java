@@ -14,7 +14,7 @@ import rx.functions.Action1;
  */
 public class CloudSongDataStore implements SongDataStore {
 
-    private static final String TAG = "UBLCloudUserDataStore";
+    private static final String TAG = "CloudSongDataStore";
 
     private final RestApi restApi;
     private final DatabaseApi databaseApi;
@@ -42,4 +42,5 @@ public class CloudSongDataStore implements SongDataStore {
     public Observable<List<SongEntity>> getPopularSongs() {
         return this.restApi.getPopularSongs();
     }
+
 }

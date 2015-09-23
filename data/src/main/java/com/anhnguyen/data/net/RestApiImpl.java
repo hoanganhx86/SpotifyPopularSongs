@@ -43,19 +43,20 @@ public class RestApiImpl implements RestApi {
             public void call(Subscriber<? super List<SongEntity>> subscriber) {
                 if (isThereInternetConnection()) {
                     try {
-                        List<SongEntity> storyEntities = getPopularSongsFromApi();
-                        if (storyEntities != null) {
-                            Log.d("getPopularSongs", "getPopularSongs " + storyEntities.size());
-                            subscriber.onNext(storyEntities);
+                        Log.d("getPopularSongs", "Begin getPopularSongs");
+                        List<SongEntity> songEntities = getPopularSongsFromApi();
+                        if (songEntities != null) {
+                            Log.d("getPopularSongs", "getPopularSongs " + songEntities.size());
+                            subscriber.onNext(songEntities);
                             subscriber.onCompleted();
                         } else {
                             Log.d("getPopularSongs", "getPopularSongs failed");
                             subscriber.onError(new NetworkConnectionException("Cannot getFeeds through cloud-Api"));
                         }
                     } catch (Exception e) {
-                        Log.d("getFeeds", "getFeeds error");
+                        Log.d("getPopularSongs", "getPopularSongs error");
                         e.printStackTrace();
-                        subscriber.onError(new NetworkConnectionException("getFeeds error " + e.getCause()));
+                        subscriber.onError(new NetworkConnectionException("getPopularSongs error " + e.getCause()));
                     }
                 } else {
                     subscriber.onError(new NetworkConnectionException("Don't have internet access"));
@@ -75,7 +76,7 @@ public class RestApiImpl implements RestApi {
                         Log.d("Retrofit", message);
                     }
                 }).build().create(GetPopularSongsApi.class);
-        return null;//getPopularSongsApi.getPopularSongs();
+        return getPopularSongsApi.getPopularSongs().map();
     }
 
 

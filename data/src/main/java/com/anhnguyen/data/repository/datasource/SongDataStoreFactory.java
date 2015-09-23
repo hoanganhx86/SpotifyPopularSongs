@@ -27,9 +27,9 @@ public class SongDataStoreFactory {
     }
 
     /**
-     * Create {@link SongDataStore} from a user id.
+     * Create {@link SongDataStore}
      */
-    public SongDataStore create(String userId) {
+    public SongDataStore create() {
         return createCloudDataStore();
     }
 

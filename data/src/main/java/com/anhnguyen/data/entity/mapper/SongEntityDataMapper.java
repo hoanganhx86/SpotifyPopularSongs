@@ -38,6 +38,17 @@ public class SongEntityDataMapper {
         Song song = null;
         if (songEntity != null) {
             song = new Song();
+            song.setAlbumName(songEntity.getAlbumName());
+            song.setAlbumUrl(songEntity.getAlbumUrl());
+            song.setArtistName(songEntity.getArtistName());
+            song.setArtworkUrl(songEntity.getArtworkUrl());
+            song.setArtistUrl(songEntity.getArtistUrl());
+            song.setCountry(songEntity.getCountry());
+            song.setDate(songEntity.getDate());
+            song.setNumStreams(songEntity.getNumStreams());
+            song.setTrackName(songEntity.getTrackName());
+            song.setTrackUrl(songEntity.getTrackUrl());
+            song.setWindowType(songEntity.getWindowType());
 
         }
 

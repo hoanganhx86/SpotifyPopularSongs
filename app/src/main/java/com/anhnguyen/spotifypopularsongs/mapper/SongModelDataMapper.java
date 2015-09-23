@@ -33,6 +33,17 @@ public class SongModelDataMapper {
         }
 
         SongModel songModel = new SongModel();
+        songModel.setAlbumName(song.getAlbumName());
+        songModel.setAlbumUrl(song.getAlbumUrl());
+        songModel.setArtistName(song.getArtistName());
+        songModel.setArtworkUrl(song.getArtworkUrl());
+        songModel.setArtistUrl(song.getArtistUrl());
+        songModel.setCountry(song.getCountry());
+        songModel.setDate(song.getDate());
+        songModel.setNumStreams(song.getNumStreams());
+        songModel.setTrackName(song.getTrackName());
+        songModel.setTrackUrl(song.getTrackUrl());
+        songModel.setWindowType(song.getWindowType());
 
         return songModel;
     }

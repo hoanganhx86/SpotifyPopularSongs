@@ -6,6 +6,8 @@ import com.anhnguyen.data.repository.datasource.SongDataStoreFactory;
 import com.domain.Song;
 import com.domain.repository.SongRepository;
 
+import android.util.Log;
+
 import java.util.List;
 
 import javax.inject.Inject;
@@ -34,7 +36,8 @@ public class SongDataRepository implements SongRepository {
     @Override
     public Observable<List<Song>> getPopularSongs() {
         // get feeds from cloud
-        final SongDataStore userDataStore = this.songDataStoreFactory.createCloudDataStore();
-        return userDataStore.getPopularSongs().map(entities -> SongEntityDataMapper.transformSongs(entities));
+        Log.d("SongDataRepository", "SongDataRepository do getPopularSongs ");
+        final SongDataStore songDataStore = this.songDataStoreFactory.createCloudDataStore();
+        return songDataStore.getPopularSongs().map(entities -> SongEntityDataMapper.transformSongs(entities));
     }
 }
