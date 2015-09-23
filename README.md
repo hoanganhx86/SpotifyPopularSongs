@@ -1,4 +1,4 @@
-# SpotifyPopularSongs
+# Spotify Popular Songs
 Get and display Spotify polular songs
 
 # Architecture
